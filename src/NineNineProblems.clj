@@ -13,3 +13,13 @@
       )
     )
   )
+
+;2 Find the last but one box of a list.
+;Example:
+;* (my-but-last '(a b c d))
+;(C D)
+
+(defn my-but-last
+  [xs]
+  xs
+  )
