@@ -7,9 +7,11 @@
 (defn my-last [xs]
   (if (empty? xs)
     nil
-    (if (empty? (rest xs))
-      xs
-      (my-last (rest xs))
+    (let [[head & tail] xs]
+      (if (empty? tail)
+        head
+        (my-last tail)
+        )
       )
     )
   )
@@ -25,8 +27,8 @@
     nil
     (let [[head & tail] xs]
       (if (= (count tail) 1)
-         head
-         (my-but-last tail)
-         ))
+        head
+        (my-but-last tail)
+        ))
     )
   )

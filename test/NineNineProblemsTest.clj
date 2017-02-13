@@ -7,7 +7,7 @@
 
 ;1.
 (deftest my-last-test
-  (is (= '([d] [1] nil) (map my-last '((a b c d) [1] []))))
+  (is (= '(d 1 nil) (map my-last '((a b c d) [1] []))))
   )
 
 
