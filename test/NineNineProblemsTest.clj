@@ -58,5 +58,15 @@
   (is (= '() (reverseR '())))
   )
 
+;6
+(deftest palindrome-test-a-proper-list
+  (is (= true (palindrome '(1 2 3 2 1))))
+  )
+(deftest palindrom-test-list-with-a-single-element
+  (is (= true (palindrome '(1))))
+  )
+(deftest palindrom-test-empty-list
+  (is (= false (palindrome '())))
+  )
 
 (run-all-tests)
