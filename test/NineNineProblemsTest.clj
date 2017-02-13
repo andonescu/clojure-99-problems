@@ -14,7 +14,7 @@
 ;2.
 
 (deftest my-but-last-test
-  (is (= '((C) nil nil) (map my-but-last '((A B C D) () (1)))))
+  (is (= '(C nil nil) (map my-but-last '((A B C D) () (1)))))
   )
 
 (run-all-tests)

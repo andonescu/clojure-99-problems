@@ -21,8 +21,12 @@
 
 (defn my-but-last
   [xs]
-  (if (<= (count xs) 2)
-    xs
-    (my-but-last (rest xs))
+  (if (< (count xs) 2)
+    nil
+    (let [[head & tail] xs]
+      (if (= (count tail) 1)
+         head
+         (my-but-last tail)
+         ))
     )
   )
