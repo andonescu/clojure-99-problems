@@ -17,4 +17,22 @@
   (is (= '(C nil nil) (map my-but-last '((A B C D) () (1)))))
   )
 
+;3.
+
+(deftest element-at-test-for-specific-element
+  (is (= 'C (element-at '(A B C D) 3)))
+  )
+
+(deftest element-at-test-for-en-empty-list
+  (is (= nil (element-at '() 3)))
+  )
+
+(deftest element-at-test-for-an-invalid-position_of_zero
+  (is (= nil (element-at '(A B C D) 0)))
+  )
+
+(deftest element-at-test-for-an-invalid-position_bigger_than_list_size
+  (is (= nil (element-at '(A B C D) 7)))
+  )
+
 (run-all-tests)

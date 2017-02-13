@@ -1,9 +1,6 @@
 (ns NineNineProblems)
 
 ;1. Find the last box of a list.
-;Example:
-;* (my-last '(a b c d))
-
 (defn my-last [xs]
   (if (empty? xs)
     nil
@@ -17,10 +14,6 @@
   )
 
 ;2 Find the last but one box of a list.
-;Example:
-;* (my-but-last '(a b c d))
-;(C D)
-
 (defn my-but-last
   [xs]
   (if (< (count xs) 2)
@@ -30,5 +23,20 @@
         head
         (my-but-last tail)
         ))
+    )
+  )
+
+;3. Find the K'th element of a list.
+;The first element in the list is number 1.
+(defn element-at
+  [xs k]
+  (if (or (nil? xs) (<= k 0))
+    nil
+    (let [[h & t] xs]
+      (if (== k 1)
+        h
+        (element-at t (- k 1))
+        )
+      )
     )
   )
