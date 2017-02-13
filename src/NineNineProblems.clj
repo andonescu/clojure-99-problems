@@ -40,3 +40,15 @@
       )
     )
   )
+
+;4. Find the number of elements of a list.
+(defn size
+  [xs]
+  (loop [xs xs
+         dim 0]
+    (if (empty? xs)
+      dim
+      (recur (rest xs) (inc dim))
+      )
+    )
+  )

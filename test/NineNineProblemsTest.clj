@@ -35,4 +35,14 @@
   (is (= nil (element-at '(A B C D) 7)))
   )
 
+;4
+(deftest size-test-for-a-list-with-four-elements
+  (is (= 4 (size '(1 2 3 4))))
+  )
+
+(deftest size-test-for-an-empty-list
+  (is (= 0 (size '())))
+  )
+
+
 (run-all-tests)
