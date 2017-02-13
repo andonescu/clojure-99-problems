@@ -21,5 +21,8 @@
 
 (defn my-but-last
   [xs]
-  xs
+  (if (<= (count xs) 2)
+    xs
+    (my-but-last (rest xs))
+    )
   )
