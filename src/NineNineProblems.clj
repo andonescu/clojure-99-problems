@@ -52,3 +52,16 @@
       )
     )
   )
+
+;5. Reverse a list.
+(defn reverseR
+  [xs]
+  (loop [xs xs rev []]
+    (if (empty? xs)
+      rev
+      (let [[head & tail] xs]
+          (recur tail (cons head rev))
+        )
+      )
+    )
+  )

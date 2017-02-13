@@ -44,5 +44,19 @@
   (is (= 0 (size '())))
   )
 
+;5.
+
+(deftest reverseR-test-a-proper-list
+  (is (= '(4 3 2 1) (reverseR '(1 2 3 4))))
+  )
+
+(deftest reverseR-test-a-list-with-a-single-element
+  (is (= '(4) (reverseR '(4))))
+  )
+
+(deftest reverseR-test-an-empty-list
+  (is (= '() (reverseR '())))
+  )
+
 
 (run-all-tests)
