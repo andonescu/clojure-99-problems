@@ -69,4 +69,9 @@
   (is (= false (palindrome '())))
   )
 
+;7.
+(deftest my-flatten-test-a-proper-list
+  (is (= '(A B C D E) (my-flatten '(A (B (C D) E)))))
+  )
+
 (run-all-tests)

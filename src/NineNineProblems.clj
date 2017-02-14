@@ -72,6 +72,15 @@
   [xs]
   (if (empty? xs)
     false
-    (== (compare (vec (reverseR xs)) (vec xs)) 0)
+    (= (compare (vec (reverseR xs)) (vec xs)) 0)
     )
+  )
+
+;7. Flatten a nested list structure.
+;Transform a list, possibly holding lists as elements into a `flat'
+;list by replacing each list with its elements (recursively).
+
+(defn my-flatten
+  [xs]
+  xs
   )
