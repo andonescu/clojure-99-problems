@@ -82,5 +82,15 @@
 
 (defn my-flatten
   [xs]
-  xs
+  (loop [xs xs acc []]
+    (if (empty? xs)
+      acc
+      (let [[head & tail] xs]
+        (if (list? head)
+          (concat (concat acc (my-flatten head)) (my-flatten tail))
+          (recur tail (concat acc [head]))
+          )
+        )
+      )
+    )
   )
