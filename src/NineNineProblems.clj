@@ -104,5 +104,17 @@
 
 (defn compress
   [xs]
-  xs
+  (loop [xs xs
+         prev []
+         acc []]
+    (if (empty? xs)
+      acc
+      (let [[h & t] xs]
+        (if (= [h] prev)
+          (recur t prev acc)
+          (recur t [h] (concat acc [h]))
+          )
+        )
+      )
+    )
   )
