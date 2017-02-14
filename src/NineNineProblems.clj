@@ -70,5 +70,8 @@
 ;A palindrome can be read forward or backward; e.g. (x a m a x).
 (defn palindrome
   [xs]
-  false
+  (if (empty? xs)
+    false
+    (== (compare (vec (reverseR xs)) (vec xs)) 0)
+    )
   )
