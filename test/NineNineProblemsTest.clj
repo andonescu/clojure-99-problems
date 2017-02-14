@@ -74,4 +74,9 @@
   (is (= '(A B C D E) (my-flatten '(A (B (C D) E)))))
   )
 
+;8.
+(deftest compress-test
+  (is (= '(A B A C B D E) (compress '(A A A A B A A C C B D D D D E))))
+  )
+
 (run-all-tests)
